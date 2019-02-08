@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Fev-2019 às 21:12
+-- Generation Time: 08-Fev-2019 às 19:16
 -- Versão do servidor: 10.1.37-MariaDB
 -- versão do PHP: 7.3.1
 
@@ -31,19 +31,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `nome` varchar(30) NOT NULL,
-  `senha` varchar(13) NOT NULL
+  `senha` varchar(13) NOT NULL,
+  `cpf` char(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `cliente`
 --
 
-INSERT INTO `cliente` (`id`, `nome`, `senha`) VALUES
-(1, 'Lucas', '1234'),
-(2, 'Bruna', '1234'),
-(3, 'Fernanda', '1234'),
-(4, 'Renan', '1234'),
-(5, 'Mateus', '1234');
+INSERT INTO `cliente` (`id`, `nome`, `senha`, `cpf`) VALUES
+(1, 'Lucas', '1234', '07439639464'),
+(8, 'Amanda', '123456', '12345678910'),
+(11, 'Bruna', '123456', '34567891012'),
+(12, 'Vinicius', '1234', '10163780640');
 
 --
 -- Indexes for dumped tables
@@ -53,7 +53,8 @@ INSERT INTO `cliente` (`id`, `nome`, `senha`) VALUES
 -- Indexes for table `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `cpf` (`cpf`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT for table `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

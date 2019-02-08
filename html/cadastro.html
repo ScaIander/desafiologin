@@ -3,29 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login</title>
+    <title>Cadastro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
 </head>
-
-
 <body>
     
     <div class="box">
 
 
-        <form method="GET" action="loginaction.php">
+        <form method="POST" action="../signupaction.php">
 
-            CPF:
-            <p><input type="text" name="cpf" placeholder="Digite seu CPF"></p>
+            Nome:
+            <p><input type="text" name="nome" placeholder="Digite seu nome , sem acento."></p>
             Senha:
             <p><input type="password" name ="senha" placeholder="Digite sua senha"></p>
+            CPF:
+            <p><input type="text" name ="cpf" placeholder ="Digite seu CPF"></p>
 
             <p><input type ="submit" name="botao" value="Enviar" class ="button"></p>
 
-            <a href="html/cadastro.html"> <input type ="button" name="cadastro" value="Cadastrar" class ="button"></a>
+            <a href="../index.html"> <input type ="button" name="voltar" value="Voltar" class ="button"></a>
 
 
 
@@ -34,8 +34,5 @@
 
     </div>
 
-
 </body>
-
-
 </html>

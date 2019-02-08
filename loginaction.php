@@ -2,11 +2,11 @@
 
 INCLUDE 'connection.php';
 
-$nome = $_GET['nome'];
+$cpf = $_GET['cpf'];
 $senha = $_GET['senha'];
 
-$sql = "SELECT  nome, senha FROM cliente WHERE
-nome = '$nome' AND senha = '$senha'";
+$sql = "SELECT  cpf, senha FROM cliente WHERE
+cpf = '$cpf' AND senha = '$senha'";
 
 $result = $conn->query($sql);
 
