@@ -14,6 +14,17 @@ $check = $conn->query($consulta);
 
 $check->fetch_assoc();
 
+
+if($nome=="" or $senha=="" or $cpf=="" ){
+
+
+die("Algum campo ficou em branco, por favor tente novamente.");
+
+
+}
+
+else{
+
 if($check->num_rows>0){
 
 die("CPF já cadastrado no sistema");
@@ -26,12 +37,15 @@ $inserirdados = "INSERT INTO cliente (nome,senha,cpf) VALUES ('$nome','$senha','
 
 $result = $conn->query($inserirdados);
 
+
 if($inserirdados){
 
     die("Cadastrado com Sucesso!!");
 }
  else{
     die("Infelizmente um erro ocorreu");
+}
+
 }
 
 }
